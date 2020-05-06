@@ -64,7 +64,7 @@ label_humidty = ttk.Label(frame1, width=10)
 label_humidty.grid(row=3, column=6)
 
 def scheduler():
-    t = threading.Timer(0.05, scheduler)
+    t = threading.Timer(0.5, scheduler)
     t.start()
     orientation_data = sense.get_orientation()
     label_pitch.configure(text=f'{orientation_data["pitch"]:.4f}')
